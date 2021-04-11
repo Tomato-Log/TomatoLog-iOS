@@ -1,0 +1,11 @@
+name: TomatoLog
+targets:
+  TomatoLog:
+    settings:
+      base:
+        INFOPLIST_FILE: TomatoLog/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.tistory.darth-vader.TomatoLog
+    type: application
+    platform: iOS
+    deploymentTarget: 12.1
+    sources: [TomatoLog]
