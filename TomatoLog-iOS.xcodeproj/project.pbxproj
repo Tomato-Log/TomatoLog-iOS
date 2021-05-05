@@ -13,7 +13,24 @@
 		F5BC0674263EA63000CEB858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Assets.xcassets */; };
 		F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */; };
 		F5BC06BA2642EB6E00CEB858 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06B92642EB6E00CEB858 /* SnapKit */; };
+		F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06BD2642EBA600CEB858 /* R.generated.swift */; };
+		F5BC06C12642ECAA00CEB858 /* RswiftDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06C02642ECAA00CEB858 /* RswiftDynamic */; };
+		F5BC06C22642ECAA00CEB858 /* RswiftDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06C02642ECAA00CEB858 /* RswiftDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5BC06C32642ECAA00CEB858 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F5BC06C22642ECAA00CEB858 /* RswiftDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TomatoLog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +40,7 @@
 		F5BC0673263EA63000CEB858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5BC0676263EA63000CEB858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5BC0678263EA63000CEB858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5BC06BD2642EBA600CEB858 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BC06BA2642EB6E00CEB858 /* SnapKit in Frameworks */,
+				F5BC06C12642ECAA00CEB858 /* RswiftDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,14 +75,23 @@
 		F5BC0669263EA62F00CEB858 /* TomatoLog-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F5BC06BC2642EB9400CEB858 /* Resources */,
 				F5BC066A263EA62F00CEB858 /* AppDelegate.swift */,
 				F5BC066E263EA62F00CEB858 /* ViewController.swift */,
 				F5BC0670263EA62F00CEB858 /* Main.storyboard */,
-				F5BC0673263EA63000CEB858 /* Assets.xcassets */,
 				F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */,
 				F5BC0678263EA63000CEB858 /* Info.plist */,
 			);
 			path = "TomatoLog-iOS";
+			sourceTree = "<group>";
+		};
+		F5BC06BC2642EB9400CEB858 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC0673263EA63000CEB858 /* Assets.xcassets */,
+				F5BC06BD2642EBA600CEB858 /* R.generated.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5BC067B263EA63000CEB858 /* Build configuration list for PBXNativeTarget "TomatoLog-iOS" */;
 			buildPhases = (
+				F5BC06CF2642F64100CEB858 /* R.swift */,
 				F5BC0663263EA62F00CEB858 /* Sources */,
 				F5BC0664263EA62F00CEB858 /* Frameworks */,
 				F5BC0665263EA62F00CEB858 /* Resources */,
+				F5BC06C32642ECAA00CEB858 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,6 +114,7 @@
 			name = "TomatoLog-iOS";
 			packageProductDependencies = (
 				F5BC06B92642EB6E00CEB858 /* SnapKit */,
+				F5BC06C02642ECAA00CEB858 /* RswiftDynamic */,
 			);
 			productName = "TomatoLog-iOS";
 			productReference = F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */;
@@ -114,6 +145,7 @@
 			mainGroup = F5BC065E263EA62E00CEB858;
 			packageReferences = (
 				F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F5BC06BF2642ECAA00CEB858 /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = F5BC0668263EA62F00CEB858 /* Products */;
 			projectDirPath = "";
@@ -137,6 +169,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F5BC06CF2642F64100CEB858 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TEMP_DIR)/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/$(TARGET_NAME)/Resources/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/R.swift/rswift\" generate \"${SRCROOT}/${TARGET_NAME}/Resources/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5BC0663263EA62F00CEB858 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +199,7 @@
 			files = (
 				F5BC066F263EA62F00CEB858 /* ViewController.swift in Sources */,
 				F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */,
+				F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +413,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		F5BC06BF2642ECAA00CEB858 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -364,6 +428,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		F5BC06C02642ECAA00CEB858 /* RswiftDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5BC06BF2642ECAA00CEB858 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
