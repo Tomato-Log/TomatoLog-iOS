@@ -30,7 +30,7 @@ xcuserdata/
 *.dSYM
 
 ## Swift Package Manager
-.build/
+.swiftpm
 
 ## fastlane
 fastlane/report.xml
@@ -39,12 +39,7 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 # Xcode Patch
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-/*.gcno
-**/xcshareddata/WorkspaceSettings.xcsettings
+project.xcworkspace
 
 # Rswift
 R.generated.swift
