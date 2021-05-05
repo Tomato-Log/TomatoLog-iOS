@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		F5BC0672263EA62F00CEB858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0670263EA62F00CEB858 /* Main.storyboard */; };
 		F5BC0674263EA63000CEB858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Assets.xcassets */; };
 		F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */; };
+		F5BC06BA2642EB6E00CEB858 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06B92642EB6E00CEB858 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BC06BA2642EB6E00CEB858 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +82,9 @@
 			dependencies = (
 			);
 			name = "TomatoLog-iOS";
+			packageProductDependencies = (
+				F5BC06B92642EB6E00CEB858 /* SnapKit */,
+			);
 			productName = "TomatoLog-iOS";
 			productReference = F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +112,9 @@
 				Base,
 			);
 			mainGroup = F5BC065E263EA62E00CEB858;
+			packageReferences = (
+				F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F5BC0668263EA62F00CEB858 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5BC06B92642EB6E00CEB858 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5BC065F263EA62E00CEB858 /* Project object */;
 }
