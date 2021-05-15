@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC066A263EA62F00CEB858 /* AppDelegate.swift */; };
-		F5BC066F263EA62F00CEB858 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC066E263EA62F00CEB858 /* ViewController.swift */; };
-		F5BC0672263EA62F00CEB858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0670263EA62F00CEB858 /* Main.storyboard */; };
-		F5BC0674263EA63000CEB858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Assets.xcassets */; };
+		F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Images.xcassets */; };
 		F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */; };
 		F5BC06BA2642EB6E00CEB858 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06B92642EB6E00CEB858 /* SnapKit */; };
 		F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06BD2642EBA600CEB858 /* R.generated.swift */; };
 		F5BC06C12642ECAA00CEB858 /* RswiftDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06C02642ECAA00CEB858 /* RswiftDynamic */; };
 		F5BC06C22642ECAA00CEB858 /* RswiftDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06C02642ECAA00CEB858 /* RswiftDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06D32642F79600CEB858 /* GatewayViewController.swift */; };
+		F5BC06D72642F8F200CEB858 /* GatewayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06D62642F8F200CEB858 /* GatewayTabView.swift */; };
+		F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06D92642FBBA00CEB858 /* GatewayTabViewDelegate.swift */; };
+		F5BC06DD2642FC8C00CEB858 /* GatewayEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06DC2642FC8C00CEB858 /* GatewayEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,12 +37,14 @@
 /* Begin PBXFileReference section */
 		F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TomatoLog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BC066A263EA62F00CEB858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5BC066E263EA62F00CEB858 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F5BC0671263EA62F00CEB858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F5BC0673263EA63000CEB858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5BC0673263EA63000CEB858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5BC0676263EA63000CEB858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5BC0678263EA63000CEB858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5BC06BD2642EBA600CEB858 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F5BC06D32642F79600CEB858 /* GatewayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayViewController.swift; sourceTree = "<group>"; };
+		F5BC06D62642F8F200CEB858 /* GatewayTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayTabView.swift; sourceTree = "<group>"; };
+		F5BC06D92642FBBA00CEB858 /* GatewayTabViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayTabViewDelegate.swift; sourceTree = "<group>"; };
+		F5BC06DC2642FC8C00CEB858 /* GatewayEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				F5BC06BC2642EB9400CEB858 /* Resources */,
+				F5BC06D02642F75900CEB858 /* Sources */,
 				F5BC066A263EA62F00CEB858 /* AppDelegate.swift */,
-				F5BC066E263EA62F00CEB858 /* ViewController.swift */,
-				F5BC0670263EA62F00CEB858 /* Main.storyboard */,
 				F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */,
 				F5BC0678263EA63000CEB858 /* Info.plist */,
 			);
@@ -88,10 +91,61 @@
 		F5BC06BC2642EB9400CEB858 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F5BC0673263EA63000CEB858 /* Assets.xcassets */,
+				F5BC0673263EA63000CEB858 /* Images.xcassets */,
 				F5BC06BD2642EBA600CEB858 /* R.generated.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5BC06D02642F75900CEB858 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06DB2642FC5D00CEB858 /* Enums */,
+				F5BC06D52642F8D800CEB858 /* Protocols */,
+				F5BC06D22642F77700CEB858 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F5BC06D12642F77000CEB858 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06D32642F79600CEB858 /* GatewayViewController.swift */,
+				F5BC06D62642F8F200CEB858 /* GatewayTabView.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		F5BC06D22642F77700CEB858 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06D12642F77000CEB858 /* Gateways */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F5BC06D52642F8D800CEB858 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06D82642FBA400CEB858 /* Gateways */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F5BC06D82642FBA400CEB858 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06D92642FBBA00CEB858 /* GatewayTabViewDelegate.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		F5BC06DB2642FC5D00CEB858 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06DC2642FC8C00CEB858 /* GatewayEndpoint.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */,
-				F5BC0674263EA63000CEB858 /* Assets.xcassets in Resources */,
-				F5BC0672263EA62F00CEB858 /* Main.storyboard in Resources */,
+				F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,23 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5BC066F263EA62F00CEB858 /* ViewController.swift in Sources */,
+				F5BC06D72642F8F200CEB858 /* GatewayTabView.swift in Sources */,
 				F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */,
 				F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */,
+				F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */,
+				F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */,
+				F5BC06DD2642FC8C00CEB858 /* GatewayEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F5BC0670263EA62F00CEB858 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5BC0671263EA62F00CEB858 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
