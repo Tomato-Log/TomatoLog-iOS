@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3826500F74003A3692 /* HomeViewController.swift */; };
+		F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3A26500F79003A3692 /* HotViewController.swift */; };
+		F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3C26500F85003A3692 /* FeedViewController.swift */; };
 		F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC066A263EA62F00CEB858 /* AppDelegate.swift */; };
 		F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Images.xcassets */; };
 		F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F56DCE3826500F74003A3692 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F56DCE3A26500F79003A3692 /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
+		F56DCE3C26500F85003A3692 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TomatoLog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BC066A263EA62F00CEB858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5BC0673263EA63000CEB858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -60,6 +66,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F56DCE3526500E7B003A3692 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE3826500F74003A3692 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F56DCE3626500E7E003A3692 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE3A26500F79003A3692 /* HotViewController.swift */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		F56DCE3726500E83003A3692 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE3C26500F85003A3692 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F56DCE3E26500FEF003A3692 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		F56DCE3F26500FFB003A3692 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC066A263EA62F00CEB858 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		F5BC065E263EA62E00CEB858 = {
 			isa = PBXGroup;
 			children = (
@@ -79,11 +125,9 @@
 		F5BC0669263EA62F00CEB858 /* TomatoLog-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F5BC0678263EA63000CEB858 /* Info.plist */,
 				F5BC06BC2642EB9400CEB858 /* Resources */,
 				F5BC06D02642F75900CEB858 /* Sources */,
-				F5BC066A263EA62F00CEB858 /* AppDelegate.swift */,
-				F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */,
-				F5BC0678263EA63000CEB858 /* Info.plist */,
 			);
 			path = "TomatoLog-iOS";
 			sourceTree = "<group>";
@@ -110,8 +154,8 @@
 		F5BC06D12642F77000CEB858 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				F5BC06D32642F79600CEB858 /* GatewayViewController.swift */,
 				F5BC06D62642F8F200CEB858 /* GatewayTabView.swift */,
+				F5BC06D32642F79600CEB858 /* GatewayViewController.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -119,7 +163,12 @@
 		F5BC06D22642F77700CEB858 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F56DCE3F26500FFB003A3692 /* AppDelegate */,
+				F56DCE3E26500FEF003A3692 /* LaunchScreen */,
 				F5BC06D12642F77000CEB858 /* Gateways */,
+				F56DCE3526500E7B003A3692 /* Home */,
+				F56DCE3626500E7E003A3692 /* Hot */,
+				F56DCE3726500E83003A3692 /* Feed */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -251,10 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BC06D72642F8F200CEB858 /* GatewayTabView.swift in Sources */,
+				F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */,
 				F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */,
 				F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */,
 				F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */,
+				F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */,
 				F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */,
+				F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */,
 				F5BC06DD2642FC8C00CEB858 /* GatewayEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,5 +6,5 @@ enum GatewayEndpoint {
 
     case home
     case hot
-    case user
+    case feed
 }

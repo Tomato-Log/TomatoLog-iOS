@@ -13,9 +13,19 @@ final class GatewayViewController: UIViewController {
         return gatewayTabView
     }()
     
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        self.defineUI()
+        self.setConstraints()
+    }
+    
+    private func defineUI() {
         self.view.addSubview(self.gatewayTabView)
+    }
+    
+    private func setConstraints() {
         self.gatewayTabView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
@@ -32,7 +42,7 @@ extension GatewayViewController: GatewayTabViewDelegate {
             break
         case .hot:
             break
-        case .user:
+        case .feed:
             break
         }
     }

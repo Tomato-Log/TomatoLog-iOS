@@ -45,11 +45,11 @@ final class GatewayTabView: UIView {
         
         return button
     }()
-    private let userTabButton: TabButton = {
+    private let feedTabButton: TabButton = {
         let button = TabButton()
         button.backgroundColor = .blue
         button.setTitle("user", for: .normal)
-        button.endpoint = .user
+        button.endpoint = .feed
         
         return button
     }()
@@ -66,9 +66,8 @@ final class GatewayTabView: UIView {
     private func defineUI() {
         self.addSubview(self.stackView)
         
-        [self.homeTabButton, self.hotTabButton, self.userTabButton].forEach {
+        [self.homeTabButton, self.hotTabButton, self.feedTabButton].forEach {
             self.stackView.addArrangedSubview($0)
-            
             $0.addTarget(self, action: #selector(self.tabButtonDidTap(_:)), for: .touchUpInside)
         }
     }
