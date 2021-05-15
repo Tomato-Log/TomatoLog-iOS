@@ -6,13 +6,6 @@ import SnapKit
 
 final class GatewayViewController: UIViewController {
     
-    private lazy var gatewayTabView: GatewayTabView = {
-        let gatewayTabView = GatewayTabView()
-        gatewayTabView.delegate = self
-        
-        return gatewayTabView
-    }()
-    
     private lazy var pageViewController: UIPageViewController = {
         let pageViewController = UIPageViewController(
             transitionStyle: .scroll,
@@ -23,6 +16,12 @@ final class GatewayViewController: UIViewController {
         pageViewController.delegate = self
         
         return pageViewController
+    }()
+    private lazy var gatewayTabView: GatewayTabView = {
+        let gatewayTabView = GatewayTabView()
+        gatewayTabView.delegate = self
+        
+        return gatewayTabView
     }()
     
     private let pagingViewControllers = [HomeViewController(), HotViewController(), FeedViewController()]
