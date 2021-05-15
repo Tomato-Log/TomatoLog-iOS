@@ -32,7 +32,7 @@ final class GatewayTabView: UIView {
     private let homeTabButton: TabButton = {
         let button = TabButton()
         button.backgroundColor = .red
-        button.setTitle("home", for: .normal)
+        button.setTitle("Home", for: .normal)
         button.endpoint = .home
         
         return button
@@ -40,7 +40,7 @@ final class GatewayTabView: UIView {
     private let hotTabButton: TabButton = {
         let button = TabButton()
         button.backgroundColor = .green
-        button.setTitle("hot", for: .normal)
+        button.setTitle("Hot", for: .normal)
         button.endpoint = .hot
         
         return button
@@ -48,7 +48,7 @@ final class GatewayTabView: UIView {
     private let feedTabButton: TabButton = {
         let button = TabButton()
         button.backgroundColor = .blue
-        button.setTitle("user", for: .normal)
+        button.setTitle("Feed", for: .normal)
         button.endpoint = .feed
         
         return button

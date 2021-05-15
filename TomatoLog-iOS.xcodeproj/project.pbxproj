@@ -10,6 +10,7 @@
 		F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3826500F74003A3692 /* HomeViewController.swift */; };
 		F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3A26500F79003A3692 /* HotViewController.swift */; };
 		F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3C26500F85003A3692 /* FeedViewController.swift */; };
+		F56DCE4626501307003A3692 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE4526501307003A3692 /* Collection+Extensions.swift */; };
 		F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC066A263EA62F00CEB858 /* AppDelegate.swift */; };
 		F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Images.xcassets */; };
 		F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 		F56DCE3826500F74003A3692 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F56DCE3A26500F79003A3692 /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
 		F56DCE3C26500F85003A3692 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F56DCE4526501307003A3692 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TomatoLog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BC066A263EA62F00CEB858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5BC0673263EA63000CEB858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		F56DCE44265012FB003A3692 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE4526501307003A3692 /* Collection+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F5BC065E263EA62E00CEB858 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 		F5BC06D02642F75900CEB858 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F56DCE44265012FB003A3692 /* Extensions */,
 				F5BC06DB2642FC5D00CEB858 /* Enums */,
 				F5BC06D52642F8D800CEB858 /* Protocols */,
 				F5BC06D22642F77700CEB858 /* Scenes */,
@@ -300,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BC06D72642F8F200CEB858 /* GatewayTabView.swift in Sources */,
+				F56DCE4626501307003A3692 /* Collection+Extensions.swift in Sources */,
 				F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */,
 				F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */,
 				F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */,

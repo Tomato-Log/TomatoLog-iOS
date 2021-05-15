@@ -2,9 +2,9 @@
 import Foundation
 
 
-enum GatewayEndpoint {
+enum GatewayEndpoint: Int {
 
-    case home
-    case hot
-    case feed
+    case home = 0
+    case hot = 1
+    case feed = 2
 }
