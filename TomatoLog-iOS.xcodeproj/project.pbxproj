@@ -3,25 +3,56 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3826500F74003A3692 /* HomeViewController.swift */; };
+		F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3A26500F79003A3692 /* HotViewController.swift */; };
+		F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3C26500F85003A3692 /* FeedViewController.swift */; };
+		F56DCE4626501307003A3692 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE4526501307003A3692 /* Collection+Extensions.swift */; };
 		F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC066A263EA62F00CEB858 /* AppDelegate.swift */; };
-		F5BC066F263EA62F00CEB858 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC066E263EA62F00CEB858 /* ViewController.swift */; };
-		F5BC0672263EA62F00CEB858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0670263EA62F00CEB858 /* Main.storyboard */; };
-		F5BC0674263EA63000CEB858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Assets.xcassets */; };
+		F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0673263EA63000CEB858 /* Images.xcassets */; };
 		F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */; };
+		F5BC06BA2642EB6E00CEB858 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06B92642EB6E00CEB858 /* SnapKit */; };
+		F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06BD2642EBA600CEB858 /* R.generated.swift */; };
+		F5BC06C12642ECAA00CEB858 /* RswiftDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06C02642ECAA00CEB858 /* RswiftDynamic */; };
+		F5BC06C22642ECAA00CEB858 /* RswiftDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F5BC06C02642ECAA00CEB858 /* RswiftDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06D32642F79600CEB858 /* GatewayViewController.swift */; };
+		F5BC06D72642F8F200CEB858 /* GatewayTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06D62642F8F200CEB858 /* GatewayTabView.swift */; };
+		F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06D92642FBBA00CEB858 /* GatewayTabViewDelegate.swift */; };
+		F5BC06DD2642FC8C00CEB858 /* GatewayEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BC06DC2642FC8C00CEB858 /* GatewayEndpoint.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F5BC06C32642ECAA00CEB858 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F5BC06C22642ECAA00CEB858 /* RswiftDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F56DCE3826500F74003A3692 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F56DCE3A26500F79003A3692 /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
+		F56DCE3C26500F85003A3692 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F56DCE4526501307003A3692 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TomatoLog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BC066A263EA62F00CEB858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5BC066E263EA62F00CEB858 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F5BC0671263EA62F00CEB858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F5BC0673263EA63000CEB858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5BC0673263EA63000CEB858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5BC0676263EA63000CEB858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5BC0678263EA63000CEB858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5BC06BD2642EBA600CEB858 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F5BC06D32642F79600CEB858 /* GatewayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayViewController.swift; sourceTree = "<group>"; };
+		F5BC06D62642F8F200CEB858 /* GatewayTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayTabView.swift; sourceTree = "<group>"; };
+		F5BC06D92642FBBA00CEB858 /* GatewayTabViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayTabViewDelegate.swift; sourceTree = "<group>"; };
+		F5BC06DC2642FC8C00CEB858 /* GatewayEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,12 +60,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BC06BA2642EB6E00CEB858 /* SnapKit in Frameworks */,
+				F5BC06C12642ECAA00CEB858 /* RswiftDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F56DCE3526500E7B003A3692 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE3826500F74003A3692 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F56DCE3626500E7E003A3692 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE3A26500F79003A3692 /* HotViewController.swift */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		F56DCE3726500E83003A3692 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE3C26500F85003A3692 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F56DCE3E26500FEF003A3692 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		F56DCE3F26500FFB003A3692 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC066A263EA62F00CEB858 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F56DCE44265012FB003A3692 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE4526501307003A3692 /* Collection+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F5BC065E263EA62E00CEB858 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +135,77 @@
 		F5BC0669263EA62F00CEB858 /* TomatoLog-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F5BC066A263EA62F00CEB858 /* AppDelegate.swift */,
-				F5BC066E263EA62F00CEB858 /* ViewController.swift */,
-				F5BC0670263EA62F00CEB858 /* Main.storyboard */,
-				F5BC0673263EA63000CEB858 /* Assets.xcassets */,
-				F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */,
 				F5BC0678263EA63000CEB858 /* Info.plist */,
+				F5BC06BC2642EB9400CEB858 /* Resources */,
+				F5BC06D02642F75900CEB858 /* Sources */,
 			);
 			path = "TomatoLog-iOS";
+			sourceTree = "<group>";
+		};
+		F5BC06BC2642EB9400CEB858 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC0673263EA63000CEB858 /* Images.xcassets */,
+				F5BC06BD2642EBA600CEB858 /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5BC06D02642F75900CEB858 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE44265012FB003A3692 /* Extensions */,
+				F5BC06DB2642FC5D00CEB858 /* Enums */,
+				F5BC06D52642F8D800CEB858 /* Protocols */,
+				F5BC06D22642F77700CEB858 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F5BC06D12642F77000CEB858 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06D62642F8F200CEB858 /* GatewayTabView.swift */,
+				F5BC06D32642F79600CEB858 /* GatewayViewController.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		F5BC06D22642F77700CEB858 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F56DCE3F26500FFB003A3692 /* AppDelegate */,
+				F56DCE3E26500FEF003A3692 /* LaunchScreen */,
+				F5BC06D12642F77000CEB858 /* Gateways */,
+				F56DCE3526500E7B003A3692 /* Home */,
+				F56DCE3626500E7E003A3692 /* Hot */,
+				F56DCE3726500E83003A3692 /* Feed */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F5BC06D52642F8D800CEB858 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06D82642FBA400CEB858 /* Gateways */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F5BC06D82642FBA400CEB858 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06D92642FBBA00CEB858 /* GatewayTabViewDelegate.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		F5BC06DB2642FC5D00CEB858 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC06DC2642FC8C00CEB858 /* GatewayEndpoint.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,15 +215,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5BC067B263EA63000CEB858 /* Build configuration list for PBXNativeTarget "TomatoLog-iOS" */;
 			buildPhases = (
+				F5BC06CF2642F64100CEB858 /* R.swift */,
 				F5BC0663263EA62F00CEB858 /* Sources */,
 				F5BC0664263EA62F00CEB858 /* Frameworks */,
 				F5BC0665263EA62F00CEB858 /* Resources */,
+				F5BC06C32642ECAA00CEB858 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "TomatoLog-iOS";
+			packageProductDependencies = (
+				F5BC06B92642EB6E00CEB858 /* SnapKit */,
+				F5BC06C02642ECAA00CEB858 /* RswiftDynamic */,
+			);
 			productName = "TomatoLog-iOS";
 			productReference = F5BC0667263EA62F00CEB858 /* TomatoLog-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +257,10 @@
 				Base,
 			);
 			mainGroup = F5BC065E263EA62E00CEB858;
+			packageReferences = (
+				F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F5BC06BF2642ECAA00CEB858 /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = F5BC0668263EA62F00CEB858 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,34 +276,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */,
-				F5BC0674263EA63000CEB858 /* Assets.xcassets in Resources */,
-				F5BC0672263EA62F00CEB858 /* Main.storyboard in Resources */,
+				F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F5BC06CF2642F64100CEB858 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TEMP_DIR)/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/$(TARGET_NAME)/Resources/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/R.swift/rswift\" generate \"${SRCROOT}/${TARGET_NAME}/Resources/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5BC0663263EA62F00CEB858 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5BC066F263EA62F00CEB858 /* ViewController.swift in Sources */,
+				F5BC06D72642F8F200CEB858 /* GatewayTabView.swift in Sources */,
+				F56DCE4626501307003A3692 /* Collection+Extensions.swift in Sources */,
+				F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */,
 				F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */,
+				F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */,
+				F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */,
+				F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */,
+				F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */,
+				F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */,
+				F5BC06DD2642FC8C00CEB858 /* GatewayEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F5BC0670263EA62F00CEB858 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5BC0671263EA62F00CEB858 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5BC0675263EA63000CEB858 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,6 +515,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		F5BC06BF2642ECAA00CEB858 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5BC06B92642EB6E00CEB858 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5BC06B82642EB6E00CEB858 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F5BC06C02642ECAA00CEB858 /* RswiftDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5BC06BF2642ECAA00CEB858 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5BC065F263EA62E00CEB858 /* Project object */;
 }
