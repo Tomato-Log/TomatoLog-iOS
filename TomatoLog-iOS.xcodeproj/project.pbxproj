@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3826500F74003A3692 /* HomeViewController.swift */; };
+		6B0A65562654AE2700F502F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A65542654AE2700F502F4 /* HomeViewController.swift */; };
+		6B0A65572654AE2700F502F4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A65552654AE2700F502F4 /* HomeViewController.xib */; };
 		F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3A26500F79003A3692 /* HotViewController.swift */; };
 		F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3C26500F85003A3692 /* FeedViewController.swift */; };
 		F56DCE4626501307003A3692 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE4526501307003A3692 /* Collection+Extensions.swift */; };
@@ -39,7 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F56DCE3826500F74003A3692 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6B0A65542654AE2700F502F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6B0A65552654AE2700F502F4 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		F56DCE3A26500F79003A3692 /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
 		F56DCE3C26500F85003A3692 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F56DCE4526501307003A3692 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
@@ -71,7 +73,8 @@
 		F56DCE3526500E7B003A3692 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F56DCE3826500F74003A3692 /* HomeViewController.swift */,
+				6B0A65542654AE2700F502F4 /* HomeViewController.swift */,
+				6B0A65552654AE2700F502F4 /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			files = (
 				F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */,
 				F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */,
+				6B0A65572654AE2700F502F4 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,10 +319,10 @@
 				F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */,
 				F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */,
 				F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */,
+				6B0A65562654AE2700F502F4 /* HomeViewController.swift in Sources */,
 				F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */,
 				F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */,
 				F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */,
-				F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */,
 				F5BC06DD2642FC8C00CEB858 /* GatewayEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
