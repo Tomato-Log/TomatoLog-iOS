@@ -132,13 +132,46 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 }
 extension HomeViewController : UIScrollViewDelegate {
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        offset = targetContentOffset.pointee
-        print("offset \(offset.y)")
-        
-        self.tomatoImageView.snp.remakeConstraints {
-            $0.height.equalTo(tomatoImageHeight - Double(offset.y))
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        offset = targetContentOffset.pointee
+//        print("offset \(offset.y)")
+//
+//        self.tomatoImageView.snp.remakeConstraints {
+//            $0.height.equalTo(tomatoImageHeight - Double(offset.y))
+//        }
+//
+//    }
+    
+//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//
+//
+//
+//    }
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//
+//        print("DidEndDecelerating 중 ~~ \(self.homeCollectionView.contentOffset.y)")
+//
+//        if Double(self.homeCollectionView.contentOffset.y) > 0.0 {
+//            self.tomatoImageView.snp.remakeConstraints {
+//                $0.height.equalTo(tomatoImageHeight)
+//            }
+//        }
+//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("스크롤 중 ~~ \(self.homeCollectionView.contentOffset.y)")
+
+        if Double(self.homeCollectionView.contentOffset.y) > 0.0 {
+            self.tomatoImageView.snp.remakeConstraints {
+                $0.height.equalTo(tomatoImageHeight - Double(self.homeCollectionView.contentOffset.y))
+            }
+        } else if Double(self.homeCollectionView.contentOffset.y) > Double(tomatoLogButton.frame.maxY) {
+//            self.homeCollectionView.isScrollEnabled = false
         }
         
     }
+    
+//    func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint,
+//                             withScrollingVelocity velocity: CGPoint) -> CGPoint {
+//
+//    }
 }

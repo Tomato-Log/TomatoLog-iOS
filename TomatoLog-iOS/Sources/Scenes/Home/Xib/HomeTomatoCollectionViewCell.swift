@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeTomatoCollectionViewCell: UICollectionViewCell {
     
@@ -18,10 +19,20 @@ class HomeTomatoCollectionViewCell: UICollectionViewCell {
     // 임시
     var imageNames = ["blue", "trxye", "wild", "mymymy", "bloom", "nevernot", "paris", "feelings", "imfeeling", "superhero"]
     
+    @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let viewAllButton = UIButton()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-//        collectionView.layer.masksToBounds = false
+        viewAllButton.setTitle("전체보기 >", for: .normal)
+        baseView.addSubview(viewAllButton)
+        viewAllButton.snp.makeConstraints {
+            $0.centerY.equalTo(baseView)
+            $0.right.equalTo(baseView).offset(14)
+        }
     }
     func setCollectionView() {
         
