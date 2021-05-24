@@ -28,12 +28,12 @@ class HomeTomatoCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        viewAllButton.setTitle("전체보기 >", for: .normal)
-        baseView.addSubview(viewAllButton)
-        viewAllButton.snp.makeConstraints {
-            $0.centerY.equalTo(baseView)
-            $0.right.equalTo(baseView).offset(14)
-        }
+//        viewAllButton.setTitle("전체보기 >", for: .normal)
+//        baseView.addSubview(viewAllButton)
+//        viewAllButton.snp.makeConstraints {
+//            $0.centerY.equalTo(baseView)
+//            $0.right.equalTo(baseView).offset(14)
+//        }
     }
     func setCollectionView() {
         
@@ -52,6 +52,15 @@ class HomeTomatoCollectionViewCell: UICollectionViewCell {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        viewAllButton.setTitle("전체보기 >", for: .normal)
+        viewAllButton.backgroundColor = .black
+        collectionView.addSubview(viewAllButton)
+        viewAllButton.snp.makeConstraints {
+            $0.centerY.equalTo(baseView)
+            $0.right.equalTo(baseView).offset(-14)
+        }
+        viewAllButton.isHidden = true
     }
 }
 extension HomeTomatoCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -91,10 +100,15 @@ extension HomeTomatoCollectionViewCell : UIScrollViewDelegate {
                 delegate.didSelectedImage(at: imageNames.last!)
             } else if Int(roundedIndex) < 0 {
                 delegate.didSelectedImage(at: imageNames[0])
-            }
-            else {
+            } else {
                 delegate.didSelectedImage(at: imageNames[Int(roundedIndex)])
             }
+        }
+        
+        if Int(roundedIndex) >= imageNames.count-1 {
+            viewAllButton.isHidden = false
+        } else {
+            viewAllButton.isHidden = true
         }
     }
     
