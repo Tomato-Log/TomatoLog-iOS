@@ -24,6 +24,7 @@ class HomeTomatoCollectionViewCell: UICollectionViewCell {
     
     let viewAllButton = UIButton()
     
+    var delegate: HomeViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,37 +69,54 @@ extension HomeTomatoCollectionViewCell: UICollectionViewDelegate, UICollectionVi
     }
 }
 extension HomeTomatoCollectionViewCell : UIScrollViewDelegate {
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        // item의 사이즈와 item 간의 간격 사이즈를 구해서 하나의 item 크기로 설정.
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
-        
-        // targetContentOff을 이용하여 x좌표가 얼마나 이동했는지 확인
-        // 이동한 x좌표 값과 item의 크기를 비교하여 몇 페이징이 될 것인지 값 설정
-        var offset = targetContentOffset.pointee
+
+        let offset = collectionView.contentOffset
         let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
         var roundedIndex = round(index)
         
-        // scrollView, targetContentOffset의 좌표 값으로 스크롤 방향을 알 수 있다.
-        // index를 반올림하여 사용하면 item의 절반 사이즈만큼 스크롤을 해야 페이징이 된다.
-        // 스크로로 방향을 체크하여 올림,내림을 사용하면 좀 더 자연스러운 페이징 효과를 낼 수 있다.
-        if scrollView.contentOffset.x > targetContentOffset.pointee.x {
+        if scrollView.contentOffset.x > offset.x {
             roundedIndex = floor(index)
-        } else if scrollView.contentOffset.x < targetContentOffset.pointee.x {
+        } else if scrollView.contentOffset.x < offset.x {
             roundedIndex = ceil(index)
         } else {
             roundedIndex = round(index)
         }
         
-        // 위 코드를 통해 페이징 될 좌표값을 targetContentOffset에 대입하면 된다.
+        if let delegate = delegate {
+            print("roundedIndex \(roundedIndex)")
+            if Int(roundedIndex) >= imageNames.count {
+                delegate.didSelectedImage(at: imageNames.last!)
+            } else if Int(roundedIndex) < 0 {
+                delegate.didSelectedImage(at: imageNames[0])
+            }
+            else {
+                delegate.didSelectedImage(at: imageNames[Int(roundedIndex)])
+            }
+        }
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        var roundedIndex = round(index)
+        
+        if scrollView.contentOffset.x > offset.x {
+            roundedIndex = floor(index)
+        } else if scrollView.contentOffset.x < offset.x {
+            roundedIndex = ceil(index)
+        } else {
+            roundedIndex = round(index)
+        }
+        
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
-        
-//        if Int(roundedIndex) >= imageNames.count {
-//            tomatoImageView.image = UIImage(named: imageNames.last!)
-//        } else {
-//            tomatoImageView.image = UIImage(named: imageNames[Int(roundedIndex)])
-//        }
     }
 }

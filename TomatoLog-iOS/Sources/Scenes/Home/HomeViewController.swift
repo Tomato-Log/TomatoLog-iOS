@@ -30,7 +30,9 @@ class HomeViewController: UIViewController {
         setButton()
         setCollectionView()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        tomatoImageView.layer.cornerRadius = CGFloat(tomatoImageHeight / 2)
+    }
     @IBAction func buttonTap(_ sender: Any) {
         print("press success")
     }
@@ -55,10 +57,10 @@ class HomeViewController: UIViewController {
         settingButton.setImage(R.image.btnSetting(), for: .normal)
         
         // 토마토 일단 여기에
+        tomatoImageView.layer.cornerRadius = CGFloat(tomatoImageHeight / 2)
         tomatoImageView.image = R.image.hotTomato()
         self.tomatoImageView.snp.makeConstraints {
             $0.height.width.equalTo(tomatoImageHeight)
-            
         }
     }
     
@@ -77,16 +79,7 @@ class HomeViewController: UIViewController {
     }
 }
 extension HomeViewController: UICollectionViewDataSource {
-    
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if section == 1 {
-//            return numberOfItems
-//        } else {
-//            return numberOfItems
-//        }
         return 2
     }
     
@@ -94,6 +87,7 @@ extension HomeViewController: UICollectionViewDataSource {
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeTomatoCollectionViewCell.identifier, for: indexPath) as! HomeTomatoCollectionViewCell
             cell.setCollectionView()
+            cell.delegate = self
             cell.layer.masksToBounds = false
             return cell
         } else {
@@ -131,32 +125,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) }
 }
 extension HomeViewController : UIScrollViewDelegate {
-    
-//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        offset = targetContentOffset.pointee
-//        print("offset \(offset.y)")
-//
-//        self.tomatoImageView.snp.remakeConstraints {
-//            $0.height.equalTo(tomatoImageHeight - Double(offset.y))
-//        }
-//
-//    }
-    
-//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-//
-//
-//
-//    }
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//
-//        print("DidEndDecelerating 중 ~~ \(self.homeCollectionView.contentOffset.y)")
-//
-//        if Double(self.homeCollectionView.contentOffset.y) > 0.0 {
-//            self.tomatoImageView.snp.remakeConstraints {
-//                $0.height.equalTo(tomatoImageHeight)
-//            }
-//        }
-//    }
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("스크롤 중 ~~ \(self.homeCollectionView.contentOffset.y)")
 
@@ -169,9 +138,10 @@ extension HomeViewController : UIScrollViewDelegate {
         }
         
     }
-    
-//    func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint,
-//                             withScrollingVelocity velocity: CGPoint) -> CGPoint {
-//
-//    }
+}
+extension HomeViewController: HomeViewDelegate {
+    func didSelectedImage(at imageName: String) {
+        self.tomatoImageView.image = UIImage(named: imageName)
+        self.tomatoImageView.reloadInputViews()
+    }
 }

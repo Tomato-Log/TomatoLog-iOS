@@ -74,7 +74,7 @@ class CarouselLayout: UICollectionViewFlowLayout {
         let ratio = (maxDistance - distance)/maxDistance
         
         let scale = ratio * (1 - self.sideItemScale) + self.sideItemScale
-        print("\(scale)")
+//        print("\(scale)")
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
         let dist = attributes.frame.midX - visibleRect.midX
         var transform = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
