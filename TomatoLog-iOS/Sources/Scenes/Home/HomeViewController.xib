@@ -63,16 +63,22 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-pX-FiO">
                     <rect key="frame" x="125" y="170" width="125" height="131"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rge-Zh-OK9">
+                    <rect key="frame" x="321" y="676" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rge-Zh-OK9" secondAttribute="trailing" constant="8" id="22O-fR-jEX"/>
                 <constraint firstItem="K5c-lO-5cC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9he-Q6-cgx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="heM-x7-XPK" secondAttribute="trailing" constant="20" id="Bxs-dT-Ynl"/>
                 <constraint firstItem="heM-x7-XPK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="HIg-KH-KXD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KkO-Dj-LhO" secondAttribute="bottom" constant="49" id="IjM-bc-dR7"/>
                 <constraint firstItem="kYM-uL-m5C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="QdX-HV-ohC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KkO-Dj-LhO" secondAttribute="trailing" id="RuV-mJ-mfK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rge-Zh-OK9" secondAttribute="bottom" constant="72" id="TPg-HY-F09"/>
                 <constraint firstItem="KkO-Dj-LhO" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.583106" id="Wpg-6N-Wgn"/>
                 <constraint firstItem="ndy-pX-FiO" firstAttribute="top" secondItem="K5c-lO-5cC" secondAttribute="bottom" constant="12" id="YWk-B2-fNe"/>
                 <constraint firstItem="KkO-Dj-LhO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c6B-It-bcH"/>
