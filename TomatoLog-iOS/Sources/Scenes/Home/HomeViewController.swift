@@ -54,11 +54,12 @@ class HomeViewController: UIViewController {
         
         // 설정 버튼
         settingButton.tintColor = .black
-        settingButton.setImage(R.image.btnSetting(), for: .normal)
+        settingButton.setImage(UIImage(named: "btnSetting"), for: .normal)
         
         // 토마토 일단 여기에
         tomatoImageView.layer.cornerRadius = CGFloat(tomatoImageHeight / 2)
-        tomatoImageView.image = R.image.hotTomato()
+        tomatoImageView.image = UIImage(named: "hotTomato")
+        
         self.tomatoImageView.snp.makeConstraints {
             $0.height.width.equalTo(tomatoImageHeight)
         }
@@ -71,6 +72,9 @@ class HomeViewController: UIViewController {
         let wishLogNib = UINib(nibName: HomeWishCollectionViewCell.identifier, bundle: nil)
         self.homeCollectionView.register(wishLogNib, forCellWithReuseIdentifier: HomeWishCollectionViewCell.identifier)
         
+        self.homeCollectionView.register(HeaderCollectionReusableView.self,
+                                         forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                         withReuseIdentifier: HeaderCollectionReusableView.identifier)
         
         homeCollectionView.layer.masksToBounds = false
         
@@ -79,12 +83,29 @@ class HomeViewController: UIViewController {
     }
 }
 extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
+                                                                     withReuseIdentifier: HeaderCollectionReusableView.identifier,
+                                                                     for: indexPath) as! HeaderCollectionReusableView
+        if indexPath.section == 1 {
+            header.configure()
+            return header
+        } else {
+            return header
+        }
+        
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeTomatoCollectionViewCell.identifier, for: indexPath) as! HomeTomatoCollectionViewCell
             cell.setCollectionView()
             cell.delegate = self
@@ -102,6 +123,10 @@ extension HomeViewController: UICollectionViewDataSource {
     
 }
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.size.width, height: 30)
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var cellHeight: CGFloat = 0

@@ -15,7 +15,7 @@
                 <outlet property="profileImageView" destination="kYM-uL-m5C" id="E0Q-7g-XAQ"/>
                 <outlet property="settingButton" destination="heM-x7-XPK" id="VZO-tz-uh3"/>
                 <outlet property="tomatoImageView" destination="ndy-pX-FiO" id="6uF-g7-al8"/>
-                <outlet property="tomatoLogButton" destination="K5c-lO-5cC" id="V0c-4n-5qV"/>
+                <outlet property="tomatoLogButton" destination="K5c-lO-5cC" id="f8V-Jf-389"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

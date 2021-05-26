@@ -20,6 +20,7 @@
 		6B0A656D26567C3200F502F4 /* HomeWishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A656B26567C3200F502F4 /* HomeWishCollectionViewCell.swift */; };
 		6B0A656E26567C3200F502F4 /* HomeWishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A656C26567C3200F502F4 /* HomeWishCollectionViewCell.xib */; };
 		6BC5E260265BE809002137C1 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5E25F265BE809002137C1 /* HomeViewDelegate.swift */; };
+		6BDDDE27265E27D000E9EAAD /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDDE26265E27D000E9EAAD /* HeaderCollectionReusableView.swift */; };
 		F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3A26500F79003A3692 /* HotViewController.swift */; };
 		F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3C26500F85003A3692 /* FeedViewController.swift */; };
 		F56DCE4626501307003A3692 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE4526501307003A3692 /* Collection+Extensions.swift */; };
@@ -64,6 +65,7 @@
 		6B0A656B26567C3200F502F4 /* HomeWishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWishCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B0A656C26567C3200F502F4 /* HomeWishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeWishCollectionViewCell.xib; sourceTree = "<group>"; };
 		6BC5E25F265BE809002137C1 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
+		6BDDDE26265E27D000E9EAAD /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		F56DCE3A26500F79003A3692 /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
 		F56DCE3C26500F85003A3692 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F56DCE4526501307003A3692 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				6B0A656826567ADF00F502F4 /* WishCollectionViewCell.xib */,
 				6B0A656B26567C3200F502F4 /* HomeWishCollectionViewCell.swift */,
 				6B0A656C26567C3200F502F4 /* HomeWishCollectionViewCell.xib */,
+				6BDDDE26265E27D000E9EAAD /* HeaderCollectionReusableView.swift */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				6B0A65562654AE2700F502F4 /* HomeViewController.swift in Sources */,
 				F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */,
 				6B0A655E2656400700F502F4 /* TomatoLogCollectionViewCell.swift in Sources */,
+				6BDDDE27265E27D000E9EAAD /* HeaderCollectionReusableView.swift in Sources */,
 				F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */,
 				F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */,
 				6B0A656D26567C3200F502F4 /* HomeWishCollectionViewCell.swift in Sources */,
