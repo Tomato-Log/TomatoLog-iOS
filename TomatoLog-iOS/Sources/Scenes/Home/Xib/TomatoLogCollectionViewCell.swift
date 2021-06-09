@@ -14,6 +14,7 @@ class TomatoLogCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var albumNameLabel: UILabel!
+    @IBOutlet weak var tomatoImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +27,11 @@ class TomatoLogCollectionViewCell: UICollectionViewCell {
         view.layer.applySketchShadow(color: UIColor.black, alpha: 0.1, x: 0, y: 4, blur: 34, spread: 0)
         view.layer.shadowPath = UIBezierPath(rect: view.bounds).cgPath
     }
-    func setCell(_ imageName: String) {
+    func setCell(_ imageName: String, tomato: String) {
         
         imageView.layer.cornerRadius = 15
         imageView.image = UIImage(named: imageName)
+        tomatoImage.image = UIImage(named: tomato)
         albumNameLabel.text = imageName
     }
 }

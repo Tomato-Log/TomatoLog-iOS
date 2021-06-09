@@ -45,7 +45,7 @@ extension HomeWishCollectionViewCell: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellHeight = collectionView.frame.height * 0.73
-        let cellWidth = collectionView.frame.width / 4
+        let cellWidth = collectionView.frame.width / 4.3
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

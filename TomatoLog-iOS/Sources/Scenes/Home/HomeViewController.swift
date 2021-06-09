@@ -11,12 +11,17 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tomatoLogButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tomatoImageView: UIImageView!
+    @IBOutlet weak var seeMoreImageView: UIImageView!
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
+    
+    
+    var tomatoImageWidth = 125.0
     var tomatoImageHeight = 131.0
     
     // 임시로 이렇게 해두기
@@ -26,7 +31,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        tomatoImageHeight = Double(self.view.frame.height) * 0.1613
         setButton()
         setCollectionView()
     }
@@ -54,15 +59,28 @@ class HomeViewController: UIViewController {
         
         // 설정 버튼
         settingButton.tintColor = .black
-        settingButton.setImage(UIImage(named: "btnSetting"), for: .normal)
+        settingButton.setImage(R.image.btnSetting(), for: .normal)
         
         // 토마토 일단 여기에
+//        tomatoImageWidth = Double(self.view.frame.width) * 0.33
+        tomatoImageHeight = Double(self.view.frame.height) * 0.1613
+        print("tomatoImageHeight \(tomatoImageHeight)")
+        
         tomatoImageView.layer.cornerRadius = CGFloat(tomatoImageHeight / 2)
-        tomatoImageView.image = UIImage(named: "hotTomato")
+        tomatoImageView.image = R.image.hotTomato()
         
         self.tomatoImageView.snp.makeConstraints {
             $0.height.width.equalTo(tomatoImageHeight)
+//            $0.width.equalTo(tomatoImageWidth)
         }
+        
+        // 더보기 이미지
+        seeMoreImageView.image = R.image.seeMore()
+        seeMoreImageView.isHidden = true
+        
+        // 추가 버튼
+//        addButton.setImage(R.image.btnAddHome(), for: .normal)
+//        settingButton.tintColor = .black
     }
     
     func setCollectionView() {
@@ -97,7 +115,7 @@ extension HomeViewController: UICollectionViewDataSource {
                                                                      withReuseIdentifier: HeaderCollectionReusableView.identifier,
                                                                      for: indexPath) as! HeaderCollectionReusableView
         if indexPath.section == 1 {
-            header.configure()
+//            header.configure()
             return header
         } else {
             return header
@@ -131,10 +149,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         
         var cellHeight: CGFloat = 0
         
-        if indexPath.row == 0 {
-            cellHeight = collectionView.frame.height * 0.6
+        if indexPath.section == 0 {
+            cellHeight = collectionView.frame.height * 0.52 //0.6
+            print("section 0 cellHeight \(cellHeight)")
         } else {
-            cellHeight = collectionView.frame.height * 0.59
+            cellHeight = collectionView.frame.height * 0.55
+            print("section 1 cellHeight \(cellHeight)")
         }
         let cellWidth = collectionView.frame.width
         return CGSize(width: cellWidth, height: cellHeight)
@@ -154,13 +174,22 @@ extension HomeViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("스크롤 중 ~~ \(self.homeCollectionView.contentOffset.y)")
 
+        let newTomatoImageHeight = tomatoImageHeight - Double(self.homeCollectionView.contentOffset.y)/1.05
+        
+        if newTomatoImageHeight <= 53 {
+            seeMoreImageView.isHidden = false
+        } else {
+            seeMoreImageView.isHidden = true
+        }
         if Double(self.homeCollectionView.contentOffset.y) > 0.0 {
             self.tomatoImageView.snp.remakeConstraints {
-                $0.height.equalTo(tomatoImageHeight - Double(self.homeCollectionView.contentOffset.y))
+                $0.height.width.equalTo(newTomatoImageHeight)
             }
+            tomatoImageView.layer.cornerRadius = CGFloat(newTomatoImageHeight / 2)
         } else if Double(self.homeCollectionView.contentOffset.y) > Double(tomatoLogButton.frame.maxY) {
 //            self.homeCollectionView.isScrollEnabled = false
         }
+        
         
     }
 }

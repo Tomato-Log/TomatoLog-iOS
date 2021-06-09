@@ -18,6 +18,7 @@ class HomeTomatoCollectionViewCell: UICollectionViewCell {
     
     // 임시
     var imageNames = ["blue", "trxye", "wild", "mymymy", "bloom", "nevernot", "paris", "feelings", "imfeeling", "superhero"]
+    var tomatoImageNames = ["hotTomato", "biteTomato", "tomato_mix2", "rotten", "tomato_mix3", "hotTomato", "biteTomato", "tomato_mix2", "rotten", "biteTomato"]
     
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -54,7 +55,8 @@ class HomeTomatoCollectionViewCell: UICollectionViewCell {
         collectionView.dataSource = self
         
         viewAllButton.setTitle("전체보기 >", for: .normal)
-        viewAllButton.backgroundColor = .black
+//        viewAllButton.backgroundColor = .systemPink
+        viewAllButton.setTitleColor(.systemPink, for: .normal)
         collectionView.addSubview(viewAllButton)
         viewAllButton.snp.makeConstraints {
             $0.centerY.equalTo(baseView)
@@ -71,7 +73,7 @@ extension HomeTomatoCollectionViewCell: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TomatoLogCollectionViewCell.identifier, for: indexPath) as! TomatoLogCollectionViewCell
-        cell.setCell(imageNames[indexPath.row])
+        cell.setCell(imageNames[indexPath.row], tomato: tomatoImageNames[indexPath.row])
         cell.setShadow()
         cell.layer.masksToBounds = false
         return cell
@@ -96,12 +98,12 @@ extension HomeTomatoCollectionViewCell : UIScrollViewDelegate {
         
         if let delegate = delegate {
             print("roundedIndex \(roundedIndex)")
-            if Int(roundedIndex) >= imageNames.count {
-                delegate.didSelectedImage(at: imageNames.last!)
+            if Int(roundedIndex) >= tomatoImageNames.count {
+                delegate.didSelectedImage(at: tomatoImageNames.last!)
             } else if Int(roundedIndex) < 0 {
-                delegate.didSelectedImage(at: imageNames[0])
+                delegate.didSelectedImage(at: tomatoImageNames[0])
             } else {
-                delegate.didSelectedImage(at: imageNames[Int(roundedIndex)])
+                delegate.didSelectedImage(at: tomatoImageNames[Int(roundedIndex)])
             }
         }
         

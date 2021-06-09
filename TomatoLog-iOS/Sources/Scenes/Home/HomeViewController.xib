@@ -11,8 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TomatoLog_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="addButton" destination="rge-Zh-OK9" id="baB-bA-c1D"/>
                 <outlet property="homeCollectionView" destination="KkO-Dj-LhO" id="7nw-c0-qa0"/>
                 <outlet property="profileImageView" destination="kYM-uL-m5C" id="E0Q-7g-XAQ"/>
+                <outlet property="seeMoreImageView" destination="9sd-Kw-yeb" id="I9Y-xR-Isy"/>
                 <outlet property="settingButton" destination="heM-x7-XPK" id="VZO-tz-uh3"/>
                 <outlet property="tomatoImageView" destination="ndy-pX-FiO" id="6uF-g7-al8"/>
                 <outlet property="tomatoLogButton" destination="K5c-lO-5cC" id="f8V-Jf-389"/>
@@ -51,8 +53,8 @@
                     <state key="normal" title="Button"/>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KkO-Dj-LhO">
-                    <rect key="frame" x="0.0" y="301" width="375" height="428"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="266.66666666666674" width="375" height="462.33333333333326"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UJU-6u-wlK">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -63,25 +65,34 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-pX-FiO">
                     <rect key="frame" x="125" y="170" width="125" height="131"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rge-Zh-OK9">
-                    <rect key="frame" x="321" y="676" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rge-Zh-OK9">
+                    <rect key="frame" x="313" y="652" width="54" height="54"/>
+                    <state key="normal" image="btnAddHome"/>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sd-Kw-yeb">
+                    <rect key="frame" x="183.66666666666666" y="302" width="8" height="7"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="Frh-uc-WQl"/>
+                        <constraint firstAttribute="height" constant="7" id="zqe-l3-qmu"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rge-Zh-OK9" secondAttribute="trailing" constant="8" id="22O-fR-jEX"/>
                 <constraint firstItem="K5c-lO-5cC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9he-Q6-cgx"/>
+                <constraint firstItem="9sd-Kw-yeb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BlS-K8-Ccf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="heM-x7-XPK" secondAttribute="trailing" constant="20" id="Bxs-dT-Ynl"/>
                 <constraint firstItem="heM-x7-XPK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="HIg-KH-KXD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KkO-Dj-LhO" secondAttribute="bottom" constant="49" id="IjM-bc-dR7"/>
                 <constraint firstItem="kYM-uL-m5C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="QdX-HV-ohC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KkO-Dj-LhO" secondAttribute="trailing" id="RuV-mJ-mfK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rge-Zh-OK9" secondAttribute="bottom" constant="72" id="TPg-HY-F09"/>
-                <constraint firstItem="KkO-Dj-LhO" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.583106" id="Wpg-6N-Wgn"/>
+                <constraint firstItem="KkO-Dj-LhO" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.63" id="Wpg-6N-Wgn"/>
                 <constraint firstItem="ndy-pX-FiO" firstAttribute="top" secondItem="K5c-lO-5cC" secondAttribute="bottom" constant="12" id="YWk-B2-fNe"/>
                 <constraint firstItem="KkO-Dj-LhO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c6B-It-bcH"/>
+                <constraint firstItem="9sd-Kw-yeb" firstAttribute="top" secondItem="ndy-pX-FiO" secondAttribute="bottom" id="gF7-yg-9G9"/>
                 <constraint firstItem="kYM-uL-m5C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="mic-7S-RnB"/>
                 <constraint firstItem="K5c-lO-5cC" firstAttribute="top" secondItem="kYM-uL-m5C" secondAttribute="bottom" constant="9" id="ykk-2k-7NT"/>
                 <constraint firstItem="ndy-pX-FiO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z9K-Zi-VSs"/>
@@ -90,6 +101,7 @@
         </view>
     </objects>
     <resources>
+        <image name="btnAddHome" width="54" height="54"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
