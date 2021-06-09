@@ -7,7 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3826500F74003A3692 /* HomeViewController.swift */; };
+		6B0A65562654AE2700F502F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A65542654AE2700F502F4 /* HomeViewController.swift */; };
+		6B0A65572654AE2700F502F4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A65552654AE2700F502F4 /* HomeViewController.xib */; };
+		6B0A655926563AAF00F502F4 /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A655826563AAF00F502F4 /* CarouselLayout.swift */; };
+		6B0A655E2656400700F502F4 /* TomatoLogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A655C2656400700F502F4 /* TomatoLogCollectionViewCell.swift */; };
+		6B0A655F2656400700F502F4 /* TomatoLogCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A655D2656400700F502F4 /* TomatoLogCollectionViewCell.xib */; };
+		6B0A65612656404700F502F4 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A65602656404700F502F4 /* CALayer+Extensions.swift */; };
+		6B0A65642656453D00F502F4 /* HomeTomatoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A65622656453D00F502F4 /* HomeTomatoCollectionViewCell.swift */; };
+		6B0A65652656453D00F502F4 /* HomeTomatoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A65632656453D00F502F4 /* HomeTomatoCollectionViewCell.xib */; };
+		6B0A656926567ADF00F502F4 /* WishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A656726567ADF00F502F4 /* WishCollectionViewCell.swift */; };
+		6B0A656A26567ADF00F502F4 /* WishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A656826567ADF00F502F4 /* WishCollectionViewCell.xib */; };
+		6B0A656D26567C3200F502F4 /* HomeWishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A656B26567C3200F502F4 /* HomeWishCollectionViewCell.swift */; };
+		6B0A656E26567C3200F502F4 /* HomeWishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A656C26567C3200F502F4 /* HomeWishCollectionViewCell.xib */; };
+		6BC5E260265BE809002137C1 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5E25F265BE809002137C1 /* HomeViewDelegate.swift */; };
+		6BDDDE27265E27D000E9EAAD /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDDE26265E27D000E9EAAD /* HeaderCollectionReusableView.swift */; };
 		F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3A26500F79003A3692 /* HotViewController.swift */; };
 		F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE3C26500F85003A3692 /* FeedViewController.swift */; };
 		F56DCE4626501307003A3692 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56DCE4526501307003A3692 /* Collection+Extensions.swift */; };
@@ -39,7 +52,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F56DCE3826500F74003A3692 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6B0A65542654AE2700F502F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6B0A65552654AE2700F502F4 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		6B0A655826563AAF00F502F4 /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
+		6B0A655C2656400700F502F4 /* TomatoLogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoLogCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B0A655D2656400700F502F4 /* TomatoLogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TomatoLogCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B0A65602656404700F502F4 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		6B0A65622656453D00F502F4 /* HomeTomatoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTomatoCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B0A65632656453D00F502F4 /* HomeTomatoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTomatoCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B0A656726567ADF00F502F4 /* WishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B0A656826567ADF00F502F4 /* WishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B0A656B26567C3200F502F4 /* HomeWishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWishCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B0A656C26567C3200F502F4 /* HomeWishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeWishCollectionViewCell.xib; sourceTree = "<group>"; };
+		6BC5E25F265BE809002137C1 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
+		6BDDDE26265E27D000E9EAAD /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		F56DCE3A26500F79003A3692 /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
 		F56DCE3C26500F85003A3692 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F56DCE4526501307003A3692 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
@@ -68,10 +94,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0A656626567AB200F502F4 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				6B0A655C2656400700F502F4 /* TomatoLogCollectionViewCell.swift */,
+				6B0A655D2656400700F502F4 /* TomatoLogCollectionViewCell.xib */,
+				6B0A65622656453D00F502F4 /* HomeTomatoCollectionViewCell.swift */,
+				6B0A65632656453D00F502F4 /* HomeTomatoCollectionViewCell.xib */,
+				6B0A656726567ADF00F502F4 /* WishCollectionViewCell.swift */,
+				6B0A656826567ADF00F502F4 /* WishCollectionViewCell.xib */,
+				6B0A656B26567C3200F502F4 /* HomeWishCollectionViewCell.swift */,
+				6B0A656C26567C3200F502F4 /* HomeWishCollectionViewCell.xib */,
+				6BDDDE26265E27D000E9EAAD /* HeaderCollectionReusableView.swift */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		6BC5E261265BE811002137C1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6BC5E25F265BE809002137C1 /* HomeViewDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		F56DCE3526500E7B003A3692 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F56DCE3826500F74003A3692 /* HomeViewController.swift */,
+				6B0A65542654AE2700F502F4 /* HomeViewController.swift */,
+				6B0A65552654AE2700F502F4 /* HomeViewController.xib */,
+				6B0A655826563AAF00F502F4 /* CarouselLayout.swift */,
+				6B0A656626567AB200F502F4 /* Xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -112,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				F56DCE4526501307003A3692 /* Collection+Extensions.swift */,
+				6B0A65602656404700F502F4 /* CALayer+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				F5BC06D82642FBA400CEB858 /* Gateways */,
+				6BC5E261265BE811002137C1 /* Home */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -276,7 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5BC0677263EA63000CEB858 /* LaunchScreen.storyboard in Resources */,
+				6B0A656A26567ADF00F502F4 /* WishCollectionViewCell.xib in Resources */,
+				6B0A655F2656400700F502F4 /* TomatoLogCollectionViewCell.xib in Resources */,
+				6B0A656E26567C3200F502F4 /* HomeWishCollectionViewCell.xib in Resources */,
 				F5BC0674263EA63000CEB858 /* Images.xcassets in Resources */,
+				6B0A65652656453D00F502F4 /* HomeTomatoCollectionViewCell.xib in Resources */,
+				6B0A65572654AE2700F502F4 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,10 +375,18 @@
 				F56DCE3D26500F85003A3692 /* FeedViewController.swift in Sources */,
 				F5BC066B263EA62F00CEB858 /* AppDelegate.swift in Sources */,
 				F5BC06BE2642EBA600CEB858 /* R.generated.swift in Sources */,
+				6B0A656926567ADF00F502F4 /* WishCollectionViewCell.swift in Sources */,
+				6B0A65642656453D00F502F4 /* HomeTomatoCollectionViewCell.swift in Sources */,
+				6B0A65562654AE2700F502F4 /* HomeViewController.swift in Sources */,
 				F5BC06DA2642FBBA00CEB858 /* GatewayTabViewDelegate.swift in Sources */,
+				6B0A655E2656400700F502F4 /* TomatoLogCollectionViewCell.swift in Sources */,
+				6BDDDE27265E27D000E9EAAD /* HeaderCollectionReusableView.swift in Sources */,
 				F56DCE3B26500F79003A3692 /* HotViewController.swift in Sources */,
 				F5BC06D42642F79600CEB858 /* GatewayViewController.swift in Sources */,
-				F56DCE3926500F74003A3692 /* HomeViewController.swift in Sources */,
+				6B0A656D26567C3200F502F4 /* HomeWishCollectionViewCell.swift in Sources */,
+				6BC5E260265BE809002137C1 /* HomeViewDelegate.swift in Sources */,
+				6B0A65612656404700F502F4 /* CALayer+Extensions.swift in Sources */,
+				6B0A655926563AAF00F502F4 /* CarouselLayout.swift in Sources */,
 				F5BC06DD2642FC8C00CEB858 /* GatewayEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
